@@ -6,10 +6,10 @@
 3. diff：计算两个时间对象之间的时间差
 
 ### 时间间隔参数
-* D:天数
-* h:小时数
-* m:分钟数
-* s:秒数
+* D: 天数
+* h: 小时数
+* m: 分钟数
+* s: 秒数
 
 ### 时间间隔：
 add和sub的第二个参数都支持以下两种方式
@@ -17,14 +17,18 @@ add和sub的第二个参数都支持以下两种方式
 2. string类型：'1D2h3m4s'
 
 ## add
+返回一个时间对象
 ```
 new Time().add(new Date(),{D:1,h:2,m:3,s:4})
 ```
 ## sub
+返回一个时间对象
 ```
 new Time().sub(new Date(),'1D2h3m4s')
 ```
 ## diff
+返回给定格式的时间差描述。
+
 第三个参数可以传入自定义的格式，默认格式：{D} days {h} hours {m} minutes {s} seconds
 ```
 let first=new Date("2017/06/23 08:00:20");
