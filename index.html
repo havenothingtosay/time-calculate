@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="time.js"></script>
+	<script type="text/javascript" src="interval.js"></script>
+	<script type="text/javascript">
+		function addbutton(){
+			let tmp=new Date();
+			console.log(tmp);
+			new Time().add(tmp,{D:1,h:2,m:3,s:4})
+		}
+
+		function subbutton(){
+			let tmp=new Date();
+			console.log(tmp);
+			new Time().sub(tmp,'1D2h4s')
+		}
+
+		function diffbutton(){
+			let first=new Date("2017/06/23 08:00:20");
+			let second=new Date("2017/06/25 10:35:57");
+			new Time().diff(first,second);
+		}
+
+		function otherbutton(){
+			result={
+				'D':1,
+				'm':2
+			}
+			let format='{D} days {h} hours {m} minutes {s} seconds'
+			console.log(/({([Dhms])})/g);
+			let x=format.replace(/({([Dhms])})/g, (...args) => {
+				console.log(args);
+			    return result[args[2]]
+			})
+			console.log(x);
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="interval" name="">
+	<button onclick="addbutton()">add</button>
+	<button onclick="subbutton()">sub</button>
+	<button onclick="diffbutton()">diff</button>
+	<!--<button onclick="otherbutton()">other</button>-->
+</body>
+</html>
