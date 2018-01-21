@@ -18,19 +18,19 @@ add和sub的第二个参数都支持以下两种方式
 
 ## add
 返回一个时间对象
-```
+```js
 new Time().add(new Date(),{D:1,h:2,m:3,s:4})
 ```
 ## sub
 返回一个时间对象
-```
+```javascript
 new Time().sub(new Date(),'1D2h3m4s')
 ```
 ## diff
 返回给定格式的时间差描述。
 
 第三个参数可以传入自定义的格式，默认格式：{D} days {h} hours {m} minutes {s} seconds
-```
+```ecmascript 6
 let first=new Date("2017/06/23 08:00:20");
 let second=new Date("2017/06/25 10:35:57");
 new Time().diff(first,second,'{D}天，{h}小时，{m}分钟，{s}秒')
