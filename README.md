@@ -30,7 +30,7 @@ new Time().sub(new Date(),'1D2h3m4s')
 返回给定格式的时间差描述。
 
 第三个参数可以传入自定义的格式，默认格式：{D} days {h} hours {m} minutes {s} seconds
-```ecmascript 6
+```js
 let first=new Date("2017/06/23 08:00:20");
 let second=new Date("2017/06/25 10:35:57");
 new Time().diff(first,second,'{D}天，{h}小时，{m}分钟，{s}秒')
